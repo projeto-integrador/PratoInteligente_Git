@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>InÃ­cio</title>
+        <title>Início</title>
         <link rel="shortcut icon" href="imagens/onlinelogomaker-061115-1725.png">
 
         <meta charset="UTF-8">
@@ -24,7 +24,7 @@ and open the template in the editor.
             <ul>
 
 
-                <li><a href="index.php">InÃ­cio</a></li>
+                <li><a href="index.php">Início</a></li>
                 <li><a href="about.php">Sobre</a></li>
                 <li><a href="equipe.php">Equipe</a></li>
                 <li><a href="contato.php">Contato</a></li>
@@ -33,34 +33,37 @@ and open the template in the editor.
             </ul>
 
         </nav>
-                     
-        
+
+
         <div class="conteudo">              
             <table>
                 <img src="imagens/alimentos02.jpg" width="1150"/>                 
-                         
-                    <form class="form-signin" method="post" action="" name="frmacesso">
-                        
-                        <label for="inputEmail" class="sr-only">UsuÃ¡rio</label>
-                        <input type="text" id="inputEmail" class="form-control" placeholder="Nome do usuÃ¡rio" 
-                               required autofocus name="txtusuario">
 
+                <form class="form-signin" method="post" action="" name="frmacesso">
+                    
+
+                    <td>
+                        <label for="inputEmail" class="sr-only">Usuário</label>
+                        <input type="text" id="inputEmail" class="form-control" placeholder="Nome do usuário" 
+                               required autofocus name="txtusuario">
                         <label for="inputPassword" class="sr-only">Senha</label>
                         <input type="password" id="inputPassword" class="form-control" placeholder="Informe sua senha" 
                                required name="txtsenha">
                         <input type="submit" name="btnenviar" class="btn btn-lg btn-primary btn-block"
                                value="Acesso"/>
-                   
-                    </form>       
-              </table>       
-        </div>
-    
+                    </td>
 
-        <div class="rodape"><h4>Copyright Â© Equipe Prato Inteligente</h4> </div>
+
+                </form>
+            </table>       
+        </div>
+
+
+        <div class="rodape"><h4>Copyright © Equipe Prato Inteligente</h4> </div>
         <?php
         $conexao = mysql_connect('localhost', 'root', '');
         if (!$conexao) {
-            die('ConexÃ£o cancelada:' . mysql_error());
+            die('Conexão cancelada:' . mysql_error());
         } echo '';
         $banco = mysql_select_db('projeto_cantina', $conexao);
 
@@ -69,7 +72,7 @@ and open the template in the editor.
           echo $resultado['nome'];
           } */
         if (isset($_POST['btnenviar'])) {
-            echo 'VocÃª clicou em mim';
+            echo 'Você clicou em mim';
             $usuario = $_POST['txtusuario'];
             $senha = md5($_POST['txtsenha']);
             $consulta = mysql_query("select * from usuarios where login='$usuario' and senha='$senha'");
