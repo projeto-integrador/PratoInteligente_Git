@@ -51,6 +51,7 @@ and open the template in the editor.
                                required name="txtsenha">
                         <input type="submit" name="btnenviar" class="btn btn-lg btn-primary btn-block"
                                value="Acesso"/>
+                        <a href="administrador/adcUser.php">Cadastro<a>
                     </td>
 
 
@@ -61,11 +62,11 @@ and open the template in the editor.
 
         <div class="rodape"><h4>Copyright © Equipe Prato Inteligente</h4> </div>
         <?php
-        $conexao = mysql_connect('localhost', 'root', '');
+        $conexao = mysql_connect('31.170.165.111', 'u963154851_canti', 'Pr@t01Ntelig3n7e');
         if (!$conexao) {
             die('Conexão cancelada:' . mysql_error());
         } echo '';
-        $banco = mysql_select_db('projeto_cantina', $conexao);
+        $banco = mysql_select_db('u963154851_pinct', $conexao);
 
         /* $consulta = mysql_query("select * from usuarios");
           while($resultado = mysql_fetch_array($consulta)){
@@ -78,6 +79,7 @@ and open the template in the editor.
             $consulta = mysql_query("select * from usuarios where login='$usuario' and senha='$senha'");
             if ($resultado = mysql_fetch_array($consulta)) {
                 header('location:area_restrita.php');
+                
             } else {
                 echo 'Acesso Negado';
             }
