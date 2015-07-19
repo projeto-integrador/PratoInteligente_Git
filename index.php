@@ -62,7 +62,7 @@ and open the template in the editor.
 
         <div class="rodape"><h4>Copyright © Equipe Prato Inteligente</h4> </div>
         <?php
-        $conexao = mysql_connect('31.170.165.111', 'u963154851_canti', 'Pr@t01Ntelig3n7e');
+        $conexao = mysql_connect('mysql.hostinger.com.br', 'u963154851_canti', 'Pr@t01Ntelig3n7e');
         if (!$conexao) {
             die('Conexão cancelada:' . mysql_error());
         } echo '';
