@@ -21,7 +21,7 @@ table {
     padding: 0;
     font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size:12pt;
-    color:#FFC125;
+    color:red;
 
 
     background-color: rgba(248, 248, 255,0.5); //fundo do quadradinho de login
@@ -29,7 +29,7 @@ table {
 
     width: 400px; 
     height: 150px; 
-    left: 50%; 
+    left: 43%; 
     border: 1px solid #dedede; 
     border-radius: 10px;
     box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055); 
@@ -37,7 +37,7 @@ table {
 
     margin: -15px 0 0 -210px; 
     padding:10px;
-    position: absolute; 
+    position: absolute;  
     top: 50%; 
 
     alignment-adjust: central;
@@ -48,8 +48,14 @@ table {
 img {
 
 
-    margin-left: 50px;
+    margin-left: 235px;
+    alignment-adjust: central;
 
 
 
+}
+button{
+    text-decoration: none
+    
+        
 }
